@@ -1,4 +1,4 @@
-import Carosal from "./carosal";
+import Carousel from "./carousel";
 
 export default function Home() {
   return (
@@ -121,7 +121,7 @@ export default function Home() {
         </button>
       </div>
 
-      <Carosal />
+      <Carousel />
     </div>
 
     
