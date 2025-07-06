@@ -2,7 +2,6 @@
 
 import React from "react";
 import { SparklesCore } from "../components/ui/sparkles";
-import { VideoText } from "../components/magicui/video-text";
 
 const Spark = () => {
   return (
@@ -18,12 +17,6 @@ const Spark = () => {
           className="w-full h-full"
           particleColor="#FFFFFF"
         />
-      </div>
-      {/* VideoText Foreground */}
-      <div className="relative z-10 ml-auto mr-auto h-[400px] w-1/2 flex items-center justify-center">
-        <VideoText src="https://cdn.magicui.design/ocean-small.webm">
-          RAGHAV J
-        </VideoText>
       </div>
     </div>
   );
