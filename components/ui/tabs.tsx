@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type Tab = {
   title: string;
   value: string;
-  content?: string | React.ReactNode | any;
+  content?: string | React.ReactNode;
 };
 
 export const Tabs = ({
@@ -34,8 +34,6 @@ export const Tabs = ({
     setActive(newTabs[0]);
   };
 
-  const [hovering, setHovering] = useState(false);
-
   return (
     <>
       <div
@@ -50,8 +48,6 @@ export const Tabs = ({
             onClick={() => {
               moveSelectedTabToTop(idx);
             }}
-            onMouseEnter={() => setHovering(true)}
-            onMouseLeave={() => setHovering(false)}
             className={cn("relative px-4 py-2 rounded-full", tabClassName)}
             style={{
               transformStyle: "preserve-3d",
@@ -78,7 +74,6 @@ export const Tabs = ({
         tabs={tabs}
         active={active}
         key={active.value}
-        hovering={hovering}
         className={cn("mt-12", contentClassName)} // Adjusted margin-top
       />
     </>
@@ -88,18 +83,16 @@ export const Tabs = ({
 export const FadeInDiv = ({
   className,
   tabs,
-  hovering,
   active,
 }: {
   className?: string;
   key?: string;
   tabs: Tab[];
   active: Tab;
-  hovering?: boolean;
 }) => {
   return (
     <div className="relative w-full h-full">
-      {tabs.map((tab, idx) =>
+      {tabs.map((tab) =>
         active.value === tab.value ? (
           <motion.div
             key={tab.value}
