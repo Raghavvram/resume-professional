@@ -37,7 +37,7 @@ const ResumeEducation: React.FC<ResumeEducationProps> = ({ index }) => {
     {
       institution: 'Vellore Institute of Technology, Amaravathi',
       degree: 'B.Tech Computer Science Engineering',
-      cgpa: '8.92',
+      cgpa: '9.04',
       graduated: '2022–Present',
     },
     {
