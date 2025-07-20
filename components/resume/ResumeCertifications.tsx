@@ -37,7 +37,7 @@ const ResumeCertifications: React.FC<ResumeCertificationsProps> = ({ index }) =>
     {
       title: '📘 NPTEL',
       items: [
-        { name: 'Introduction to Internet of Things (Jul–Oct 2023)' },
+        { name: 'Introduction to Internet of Things (Jul–Oct 2023)', link: 'https://drive.google.com/file/d/1_8l72bhxB35MXGeZppLWWEo8ykHBnY-r/view?usp=sharing' },
       ],
     },
     {
